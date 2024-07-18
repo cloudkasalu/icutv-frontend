@@ -1,0 +1,55 @@
+
+// %background-image{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     right: 0;
+//     object-fit: cover;
+//     object-position: center;
+// }
+
+
+%btn{
+    display: block;
+    outline: none;
+    padding: .5rem 1.5rem;
+    font-family: var(--body-font);
+    font-weight: 400;
+    border-radius: var(--rounded-md);
+}
+
+.btn-none{
+    @extend %btn;
+    border: none;
+    background: none;
+}
+
+.btn-primary{
+    @extend %btn;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary{
+    @extend %btn;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--white);
+}
+
+.btn-primary-outline{
+    @extend %btn;
+    background: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary-outline{
+    @extend %btn;
+    background: none;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+
