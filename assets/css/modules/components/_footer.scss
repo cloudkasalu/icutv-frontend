@@ -21,9 +21,10 @@ footer{
         border-bottom: 1px solid var(--grey);
         .category-link{
             display: inline-block;
-            border-bottom:1px solid transparent;
+            // border-bottom:1px solid transparent;
             &:hover{
-                border-bottom:1px solid var(--text-color);
+                // border-bottom:1px solid var(--text-color);
+                text-decoration: underline;
             }
         }
     }
@@ -37,20 +38,6 @@ footer{
         h5{
             margin: 0;
             font-size: 17px;
-        }
-        .socials-list{
-            display: flex;
-            column-gap: .8rem;
-
-            .social-link{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: .5rem;
-            }
-            .social-link svg{
-                font-size: 20px;
-            }
         }
     }
 

@@ -2,7 +2,6 @@ const drawerTogglers = document.querySelectorAll('.drawer-toggler')
 const drawer = document.querySelector('.drawer');
 const dropdowns = document.querySelectorAll('.dropdown');
 const subDropdowns = document.querySelectorAll('.sub-dropdown');
-// const dropdownMenu = document.querySelectorAll('.dropdown-menu');
 
 
 
@@ -21,21 +20,6 @@ drawerTogglers.forEach(function(toggler){
       });
 })
 
-
-
-// dropdownButton.addEventListener('click', () => {
-//   const isExpanded = dropdownButton.getAttribute('aria-expanded') === 'true';
-//   dropdownButton.setAttribute('aria-expanded', !isExpanded);
-//   dropdownMenu.classList.toggle('show-menu');
-// });
-
-
-// document.addEventListener('click', (event) => {
-//   if (!dropdownButton.contains(event.target)) {
-//     dropdownButton.setAttribute('aria-expanded', 'false');
-//     dropdownMenu.classList.remove('show-menu');
-//   }
-// });
 
 dropdowns.forEach((dropdown)=>{
     let button = dropdown.querySelector('.dropdown-button');

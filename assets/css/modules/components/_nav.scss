@@ -1,19 +1,28 @@
 
-nav{
+header{
     background-color: var(--white);
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    height: 70px;
+    width: 100%;
+}
+nav.categories{
+    background-color: var(--white);
+    top: 70px;
+    position: sticky;
     z-index: 9;
     width: 100%;
 }
 
-nav .annoucements{
+header .annoucements{
     background-color: var(--danger);
 }
 
-nav  .navbar{
+header  .navbar{
     height: 70px;
     padding: 1rem;
-    border-bottom: 1px solid var(--grey);
+    border-bottom: 1px solid var(--off-white);
     position: relative;
     width: 100%;
     display: flex;
@@ -111,7 +120,8 @@ nav  .navbar{
         display: none;
     }
 }
-nav .categories{
+
+nav.categories{
     display: none;
     padding: 1rem 0;
 
@@ -133,13 +143,13 @@ nav .categories{
 }
 
 @media (min-width: 1024px) {
-    nav .categories{
+    nav.categories{
         display: block;
     }
 }
 
 @media (min-width: 640px) {
-    nav .navbar .nav-auth{
+    header .navbar .nav-auth{
         display: flex;
     }
     

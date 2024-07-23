@@ -1,0 +1,17 @@
+.search-bar .search-form {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0;
+  background: none;
+  border-radius: var(--rounded-lg);
+}
+
+.search-results {
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--grey);
+}
+.search-results .results {
+  display: grid;
+  row-gap: 2rem;
+}/*# sourceMappingURL=search.css.map */
