@@ -1,0 +1,27 @@
+.account-settings-header {
+  padding: 3rem 0;
+}
+
+.account-settings-body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.settings-modal {
+  padding: 2rem;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded-lg);
+}
+
+.personal-settings {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 3rem;
+}
+.personal-settings > * {
+  flex: 1;
+}/*# sourceMappingURL=account.css.map */

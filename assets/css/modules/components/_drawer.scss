@@ -21,7 +21,32 @@
         transition: all 200ms ease-in;
         background-color: var(--white);
 
+        .search-form{
+            padding: .5rem;
+            display: flex;
+            background-color: var(--off-white);
+            input[type="search"]{
+                flex: 1;
+                border-radius:0;
+                border: 1px solid var(--secondary);
+                outline: none;
+            }
+            .search-btn{
+                padding: .5rem;
+                border-radius: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    font-size: 24px;
+                }
+            }
 
+            @media (min-width:640px){
+                display:none;
+            }
+                
+        }
 
         .drawer-list{
             margin-top: 1rem;

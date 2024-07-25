@@ -1,4 +1,5 @@
 .news-grid {
+  padding-bottom: 6rem;
   display: grid;
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
@@ -22,6 +23,9 @@
 }
 
 @media (min-width: 640px) {
+  .news-grid {
+    margin-top: 2rem;
+  }
   .news-grid .inner-grid {
     grid-template-columns: 1fr 2fr;
   }

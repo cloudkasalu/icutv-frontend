@@ -11,7 +11,7 @@ nav.categories{
     background-color: var(--white);
     top: 70px;
     position: sticky;
-    z-index: 9;
+    z-index: 8;
     width: 100%;
 }
 
@@ -26,15 +26,15 @@ header  .navbar{
     position: relative;
     width: 100%;
     display: flex;
+    column-gap: 2rem;
     align-items: center;
     justify-content: space-between;
 
-    .menu-icons{
+    .navbar-icons{
         display: flex;
         align-items: center;
         column-gap: 1.5rem;
         .drawer-toggler{
-            width: 100%;
             height: 24px;
             z-index: 10;
             border: none;
@@ -104,32 +104,108 @@ header  .navbar{
     }
 
     .brand{
-        margin: auto;
-        left: 0;
-        right: 0;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            width: 130px;
+        display: inline-block;
+        width: 120px;
+    }
+    .search-form{
+        display: none;
+
+        input{
+            margin:0;
         }
     }
 
     .nav-auth{
         display: none;
     }
+
+    .avatar-placeholder, .avatar{
+        width: 38px;
+        height: 38px;
+        border-radius:50%;
+        overflow: hidden;
+    }
+
+    .avatar-placeholder{
+        background-color: var(--secondary);
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .dropdown{
+        z-index: 9;
+        position: relative;
+
+        &.active{
+            &>.dropdown-button{
+                border: none;
+                svg{
+                    transform: rotate(-180deg);
+                }
+            }
+            &>.dropdown-menu{
+                display: block;
+            }
+        }
+        .dropdown-button{
+            font-size: 15px;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            cursor: pointer;
+
+            .username{
+                display:none;
+            }
+            svg{
+                font-size: 24px;
+                display: none;
+            }
+        }
+        .dropdown-menu{
+            display: none;
+            position: absolute;
+            top: 3rem;
+            right:0;
+            text-wrap: nowrap;
+            .menu-list{
+                overflow: hidden;
+                min-width: 170px;
+                background-color: var(--white);
+                border: 1px solid var(--off-white);
+                box-shadow: var(--shadow);
+                border-radius: .5rem;
+            }
+            .menu-list-link{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                padding:.8rem;
+                svg{
+                    width: 24px;
+                    color: var(--font-color);
+                }
+                &:hover{
+                    background-color: var(--off-white);
+                }
+            }
+        }
+    }
 }
 
 nav.categories{
     display: none;
-    padding: 1rem 0;
+    border-bottom: 1px solid var(--off-white);
 
     .category-list{
         width: 100%;
-        margin: auto;
         display: flex;
-        justify-content: center;
+        align-items: center;
 
         .category-link{
             display: inline-block;
@@ -138,19 +214,55 @@ nav.categories{
             &.active{
                 border-bottom:2px solid var(--primary);
             }
+            &:hover{
+                background: var(--off-white);
+            }
         }
     }
+}
+
+
+
+@media (min-width: 640px) {
+    header .navbar {
+        .nav-auth{
+            display: flex;
+        }
+        .search-form{
+            display: block;
+            width: 100%;
+        }
+        .search-icon{
+            display: none;
+        }
+        .profile {
+            .dropdown-button svg, .dropdown-button .username{
+                display:block;
+            }
+        }
+    }
+    
 }
 
 @media (min-width: 1024px) {
     nav.categories{
         display: block;
     }
-}
-
-@media (min-width: 640px) {
-    header .navbar .nav-auth{
-        display: flex;
-    }
+    header .navbar {
+        .search-form{
+            display: flex;
+            max-width: 640px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
     
+            input{
+                margin:0;
+            }
+        }
+    }
+
 }
