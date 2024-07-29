@@ -30,12 +30,12 @@
 
     .main{
         margin: auto;
-        max-width: var(--container-md);
+        max-width: var(--container-lg);
         display: flex;
         flex-direction: column;
 
         .content{
-            max-width: var(--container-sm);
+            max-width: var(--container-md);
             width: 100%;
             margin: auto;
             display: grid;

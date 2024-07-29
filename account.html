@@ -25,7 +25,7 @@
                 <a href="/" class="brand" title="home"><img src="assets/images/logo.svg" class="logo" alt="icu tv logo"></a>
             </div>
             <form class="search-form">
-                <input type="search" class="form-control" name="search" id="search" placeholder="Search">
+                <input type="search" class="main-search" name="search" id="search" placeholder="Search">
             </form>
             <div class="navbar-icons">
                 <button type="button" title="search" class="drawer-toggler search-icon" data-toggle="collapse" data-target="#drawer" aria-controls="drawer" aria-expanded="false" aria-label="Toggle Drawer">
@@ -144,18 +144,17 @@
         </div>
     </div>
     <main>
-        <div class="account-settings container-xl">
-            <div class="account-settings-header">
-                <h2>Account Settings</h2>
-            </div>
-            <div class="account-settings-body">
-                <section class="settings-modal">
-                    <h3>Personal Details</h3>
-                    <form action="" class="personal-settings" >
+        <div class="account-settings">
+            <div class="container-lg">
+                <div class="account-settings-header">
+                    <h2>Account Settings</h2>
+                </div>
+                <div class="account-settings-body">
+                    <form action="" class="update-avatar" >
                         <div class="user-image">
                             <div class="image">
                                 <div class="image-container">
-                                    <img src="" alt="">
+                                    <img id="preview" src="/assets/images/placeholder.webp" alt="">
                                 </div>
                             </div>
                             <input type="file" accept="image/*" name="avatar" onchange="previewImage(event)" class="form-control">
@@ -173,8 +172,12 @@
                                 }
                              </script>
                         </div>
-                        <div class="user-info">
-                            <div class="form-col">
+                        <button title="update avatar" type="submit" class="btn btn-primary">Update Avatar</button>
+                    </form>
+                    <section class="settings-modal">
+                        <h3>Personal Details</h3>
+                        <form action="" class="personal-settings" >
+                            <div class="user-info">
                                 <div class="form-group">
                                     <label for="firstname">Firstname</label>
                                     <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Firstname">
@@ -183,24 +186,71 @@
                                     <label for="lastname">Lastname</label>
                                     <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Lastname">
                                 </div>
+                                <div class="form-group">
+                                    <label for="birthdate">Birthdate</label>
+                                    <input type="date" name="birthdate" id="birthdate" class="form-control" placeholder="Birthdate">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select name="gender" class="form-control" id="gender">
+                                        <option value="male">Male</option>
+                                        <option value="male">Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="phone" name="phone" id="phone" class="form-control" placeholder="phone">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            <div class="button-wrapper">
+                                <button title="update info" type="submit" class="btn btn-primary">Update Info</button>
                             </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="phone" name="phone" id="phone" class="form-control" placeholder="phone">
+                        </form>
+                    </section>
+                    <section class="settings-modal">
+                        <h3>Change Password</h3>
+                        <form action="" class="personal-settings" >
+                            <div class="user-password">
+                                <div class="form-group">
+                                    <label for="email">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">New Password</label>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="New Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confrim Password</label>
+                                    <input type="password" name="confirm-password" id="confirm-password" class="form-control" placeholder="Confirm Password">
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </section>
-            </div> 
+                            <div class="button-wrapper">
+                                 <button title="change password" type="submit" class="btn btn-primary">Change Password</button>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="settings-modal">
+                        <h3>Manage Account</h3>
+                        <form action="" class="delete-account" >
+                            <p>Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.</p>
+                            <input type="password" name="password" placeholder="Password" class="form-control">
+                            <button class="btn btn-danger">Detele Account</button>
+                        </form>
+                    </section>
+                </div> 
+            </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer-dark">
         <div class="container-xl">
-            <a href="/" class="brand" title="home"><img src="assets/images/logo.svg" class="logo" alt="icu tv logo"></a>
+            <a href="/" class="brand" title="home">
+                <img src="assets/images/logo.svg" class="logo" alt="icu tv logo">
+                <img src="assets/images/logo alt.svg" class="logo logo-white" alt="icu tv logo">
+            </a>
             <ul class="category-list">
                 <li class="category-item"><a href="/" class="category-link active">Home</a></li>
                 <li class="category-item"><a href="/" class="category-link">News</a></li>

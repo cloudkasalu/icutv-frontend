@@ -1,3 +1,8 @@
+.account-settings {
+  background-color: var(--off-white);
+  padding-bottom: 6rem;
+}
+
 .account-settings-header {
   padding: 3rem 0;
 }
@@ -8,19 +13,60 @@
   row-gap: 2rem;
 }
 
+.update-avatar {
+  padding: 0 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.update-avatar .user-image .image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.update-avatar button {
+  height: 40px;
+}
+
 .settings-modal {
   padding: 2rem;
   background-color: var(--white);
   box-shadow: var(--shadow);
   border-radius: var(--rounded-lg);
 }
+.settings-modal h3 {
+  margin-bottom: 3rem;
+}
+.settings-modal .button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.settings-modal button {
+  height: 40px;
+}
+.settings-modal .form-group {
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.settings-modal input, .settings-modal select {
+  max-width: 500px;
+}
+
+.delete-account p {
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
 
 .personal-settings {
   display: flex;
-  align-items: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  row-gap: 3rem;
+  flex-direction: column;
 }
 .personal-settings > * {
   flex: 1;

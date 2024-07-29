@@ -39,6 +39,13 @@
     color: var(--white);
 }
 
+.btn-danger{
+    @extend %btn;
+    background-color: var(--error);
+    border: 1px solid var(--error);
+    color: var(--white);
+}
+
 .btn-primary-outline{
     @extend %btn;
     background: none;
