@@ -6,14 +6,11 @@
         margin: auto;
         margin-top: 5rem;
         margin-bottom: 1rem;
-        max-width: var(--container-sm);
+        max-width: var(--container-md);
         .breadcrumbs{
             margin-bottom: 1rem;
         }
         
-        .title{
-            max-width: 700px;
-        }
     
         .meta-info{
             display: flex;
@@ -33,6 +30,7 @@
         max-width: var(--container-lg);
         display: flex;
         flex-direction: column;
+        row-gap: 3rem;
 
         .content{
             max-width: var(--container-md);
@@ -63,4 +61,14 @@
 
     }
 
+}
+
+@media (min-width:1024px) {
+    .heading .title{
+        h1{
+            font-size: 36px;
+        }
+    }
+
+    
 }

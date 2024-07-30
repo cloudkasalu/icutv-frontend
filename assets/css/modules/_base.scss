@@ -151,7 +151,12 @@ textarea.form-control{
 }
 
 
-.underline-cards{
+.underline-cards-horizontal{
+    &>*{
+        border-bottom:1px solid var(--off-white);
+    }
+}
+.underline-cards-vertical{
     &>*{
         border-bottom:1px solid var(--off-white);
     }
@@ -213,7 +218,7 @@ textarea.form-control{
     }
 
     .meta-details{
-        padding-top: 1rem;
+        padding-top: 1.5rem;
         padding-bottom: .5rem;
         font-size:13px;
         color: var(--text-color);

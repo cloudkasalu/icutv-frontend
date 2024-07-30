@@ -22,6 +22,17 @@
   row-gap: 1rem;
 }
 
+.featured-stories {
+  border-top: 2px solid var(--off-white);
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 2rem;
+}
+
 @media (min-width: 640px) {
   .news-grid {
     margin-top: 2rem;

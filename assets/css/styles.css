@@ -173,10 +173,14 @@ textarea.form-control {
      object-position: center;
 }
 
-.underline-cards > * {
+.underline-cards-horizontal > * {
   border-bottom: 1px solid var(--off-white);
 }
-.underline-cards > *:last-child {
+
+.underline-cards-vertical > * {
+  border-bottom: 1px solid var(--off-white);
+}
+.underline-cards-vertical > *:last-child {
   border-bottom: none;
 }
 
@@ -232,7 +236,7 @@ textarea.form-control {
      object-position: center;
 }
 .article-card .meta-details {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   padding-bottom: 0.5rem;
   font-size: 13px;
   color: var(--text-color);
