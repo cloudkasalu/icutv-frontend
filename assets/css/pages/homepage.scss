@@ -1,8 +1,8 @@
 
 .news-grid{
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
     display: grid;
-    column-gap: 1.5rem;
+    gap: 1.5rem;
     .inner-grid{
         display: grid;
         gap: 1.5rem;
@@ -20,13 +20,12 @@
     .top-stories{
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
+        row-gap: 1.5rem;
     }
 
 }
 
 .featured-stories{
-    border-top:2px solid var(--off-white) ;
     padding-top: 2rem;
     padding-bottom: 4rem;
     display: grid;

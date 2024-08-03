@@ -37,6 +37,7 @@ body {
 
 p {
   font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
 }
 
@@ -184,6 +185,21 @@ textarea.form-control {
   border-bottom: none;
 }
 
+.section-heading {
+  border-top: 2px solid var(--secondary);
+  padding-top: 0.8rem;
+}
+.section-heading .heading-link {
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.section-heading .heading-link svg {
+  font-size: 26px;
+}
+
 .article-card {
   display: block;
   width: 100%;
@@ -199,23 +215,40 @@ textarea.form-control {
   min-width: 170px;
   height: 170px;
 }
-.article-card.card-md {
+.article-card.card-md.sm-row {
+  width: 100%;
   display: flex;
   -moz-column-gap: 0.8rem;
        column-gap: 0.8rem;
 }
-.article-card.card-md > * {
-  flex: 1;
+.article-card.card-md.sm-row .article-image {
+  width: 40%;
+  height: 90px;
+  margin-top: 0;
+}
+.article-card.card-md.sm-row .article-details {
+  width: 60%;
+}
+.article-card.card-md.sm-row .article-details h5 {
+  margin-bottom: 0;
+}
+.article-card.card-md.sm-row .article-details p {
+  display: none;
 }
 .article-card.card-lg .article-image {
   width: calc(100% + 2rem);
   margin-right: -1rem;
   margin-left: -1rem;
-  height: 200px;
+  height: 230px;
+}
+@media (max-width: 620px) {
+  .article-card.card-lg h2 {
+    font-size: 24px;
+  }
 }
 .article-card.card-md .article-image {
   width: 100%;
-  height: 120px;
+  height: 190px;
 }
 .article-card .article-image {
   position: relative;
@@ -276,14 +309,26 @@ textarea.form-control {
   .article-card {
     width: 100%;
   }
-  .article-card.card-md {
+  .article-card.card-md.sm-row {
+    display: block;
+  }
+  .article-card.card-md.sm-row .article-image, .article-card.card-md.sm-row .article-details {
+    width: 100%;
+  }
+  .article-card.card-md.sm-row .article-image {
+    height: 150px;
+  }
+  .article-card.card-md.sm-row .article-details h5 {
+    margin-bottom: 1rem;
+  }
+  .article-card.card-md.sm-row .article-details p {
     display: block;
   }
   .article-card.card-lg .article-image {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    height: 250px;
+    height: 230px;
   }
   .article-card.card-md .article-image {
     height: 150px;
@@ -291,10 +336,15 @@ textarea.form-control {
 }
 @media (min-width: 768px) {
   .article-card.card-lg .article-image {
-    height: 370px;
+    height: 320px;
   }
   .article-card.card-md .article-image {
     height: 170px;
+  }
+}
+@media (min-width: 1024px) {
+  .article-card.card-lg .article-image {
+    height: 370px;
   }
 }
 .btn-secondary-outline, .btn-primary-outline, .btn-danger, .btn-secondary, .btn-primary, .btn-none {
@@ -309,6 +359,7 @@ textarea.form-control {
 .btn-none {
   border: none;
   background: none;
+  border-radius: 0;
 }
 
 .btn-primary {
