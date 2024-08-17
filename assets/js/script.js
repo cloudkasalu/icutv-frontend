@@ -3,7 +3,16 @@ const drawer = document.querySelector('.drawer');
 const drawerOverlay = document.querySelector('.drawer-overlay');
 const dropdowns = document.querySelectorAll('.dropdown');
 const subDropdowns = document.querySelectorAll('.sub-dropdown');
+const modalButton = document.querySelectorAll('.modal-button');
+const modal = document.querySelector('.pop-up-modal');
 
+modalButton.forEach((button)=>{
+    button.addEventListener('click', (e)=>{
+        modal.classList.toggle('modal-open');
+        document.body.classList.toggle('no-scroll');
+
+    })
+})
 
 function toggleDrawer(toggler){
 
@@ -46,7 +55,7 @@ dropdowns.forEach((dropdown)=>{
         }
 
         dropdowns.forEach((dropdown)=>{
-            if(!dropdown.classList.contains('profile')){
+            if(!dropdown.classList.contains('modal-dropdown')){
                 dropdown.classList.remove('active')
             }
         })
@@ -73,3 +82,18 @@ subDropdowns.forEach((dropdown)=>{
     })
 })
 
+
+document.addEventListener('click',(e)=>{
+    const target = e.target;
+    const dropdowns = document.querySelectorAll('.modal-dropdown.dropdown');
+
+    dropdowns.forEach((dropdown) => {
+        const dropdownButton = dropdown.querySelector('.dropdown-button');
+        const dropdownContent = dropdown.querySelector('.dropdown-menu');
+
+        if(!dropdownButton.contains(target) && !dropdownContent.contains(target) && dropdown.classList.contains('active')){
+            dropdown.classList.remove('active');
+        }
+    })
+    
+})

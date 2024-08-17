@@ -1,0 +1,35 @@
+%absolute{
+    position: absolute;
+    top: 3rem;
+    text-wrap: nowrap;
+}
+
+.dropdown{
+    position: relative;
+
+    &.active{
+        &>.dropdown-button{
+            border: none;
+            svg.chevron{
+                transform: rotate(-180deg);
+            }
+        }
+        &>.dropdown-menu{
+            display: block;
+        }
+    }
+
+    .dropdown-menu{
+        display: none;
+
+        &.lft{
+            @extend %absolute;
+            left:0;
+        }
+
+        &.rgt{
+            @extend %absolute;
+            right: 0;
+        }
+    }
+}

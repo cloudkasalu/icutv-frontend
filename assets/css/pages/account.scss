@@ -1,6 +1,6 @@
 
 .account-settings{
-    background-color: var(--off-white);
+    background-color: var(--gray-500);
     padding-bottom: 6rem;
 }
 .account-settings-header{
@@ -67,6 +67,12 @@
     p{
         max-width: 600px;
         margin-bottom: 1rem;
+    }
+
+    .actions{
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
     }
 }
 

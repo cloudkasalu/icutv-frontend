@@ -1,0 +1,42 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.pagination li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.pagination li a,
+.pagination li span {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #cbd5e1; /* Slate 300 */
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569; /* Slate 700 */
+    background-color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination li a:hover {
+    background-color: #f1f5f9; /* Slate 100 */
+    color: #334155; /* Slate 600 */
+}
+
+.pagination li.active span {
+    background-color: #475569; /* Slate 700 */
+    color: #fff;
+    cursor: default;
+}
+
+.pagination li.disabled span,
+.pagination li.disabled a {
+    color: #94a3b8; /* Slate 500 */
+    background-color: #f8fafc; /* Slate 50 */
+    cursor: not-allowed;
+}

@@ -1,5 +1,5 @@
 
-header{
+header.navigation{
     background-color: var(--white);
     position: sticky;
     top: 0;
@@ -22,7 +22,7 @@ header .annoucements{
 header  .navbar{
     height: 70px;
     padding: 1rem;
-    border-bottom: 1px solid var(--off-white);
+    border-bottom: 1px solid var(--gray-400);
     position: relative;
     width: 100%;
     display: flex;
@@ -33,7 +33,9 @@ header  .navbar{
     .navbar-icons{
         display: flex;
         align-items: center;
-        column-gap: 1.5rem;
+        &:first-of-type{
+            column-gap: 1.25rem;
+        }
         .drawer-toggler{
             height: 24px;
             z-index: 10;
@@ -105,19 +107,32 @@ header  .navbar{
 
     .brand{
         display: inline-block;
-        width: 120px;
+        width: 110px;
     }
     .search-form{
         display: none;
+        overflow:hidden;
 
+        border-radius: var(--rounded-md);
+        background-color: var(--gray-500);
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            padding-left:.8rem;
+            svg{
+                font-size: 24px;
+                color: var(--text-color);
+            }
+        }
         .main-search{
+            padding: 0.8rem;
+            background-color: var(--gray-500);
             width: 100%;
             max-width: 100%;
-            padding: 0.8rem 1rem;
-            background-color: var(--off-white);
             border: none;
             outline: none;
-            border-radius: var(--rounded-md);
             color: var(--text-color);
             font-size: 15px;
             font-family: var(--body-font);
@@ -125,7 +140,10 @@ header  .navbar{
     }
 
     .nav-auth{
-        display: none;
+        display: flex;
+        .sign-up{
+            display: none;
+        }
     }
 
     .avatar-placeholder, .avatar{
@@ -146,20 +164,9 @@ header  .navbar{
     }
 
     .dropdown{
+        margin-left: 1rem;
         z-index: 9;
-        position: relative;
 
-        &.active{
-            &>.dropdown-button{
-                border: none;
-                svg{
-                    transform: rotate(-180deg);
-                }
-            }
-            &>.dropdown-menu{
-                display: block;
-            }
-        }
         .dropdown-button{
             font-size: 15px;
             display: flex;
@@ -176,16 +183,11 @@ header  .navbar{
             }
         }
         .dropdown-menu{
-            display: none;
-            position: absolute;
-            top: 3rem;
-            right:0;
-            text-wrap: nowrap;
             .menu-list{
                 overflow: hidden;
                 min-width: 170px;
                 background-color: var(--white);
-                border: 1px solid var(--off-white);
+                border: 1px solid var(--gray-400);
                 box-shadow: var(--shadow);
                 border-radius: .5rem;
             }
@@ -200,7 +202,7 @@ header  .navbar{
                     color: var(--font-color);
                 }
                 &:hover{
-                    background-color: var(--off-white);
+                    background-color: var(--gray-400);
                 }
             }
         }
@@ -209,22 +211,25 @@ header  .navbar{
 
 nav.categories{
     display: none;
-    border-bottom: 1px solid var(--off-white);
+    border-bottom: 1px solid var(--gray-400);
 
     .category-list{
         width: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
 
         .category-link{
             display: inline-block;
+            font-weight: 500;
             padding: .5rem .8rem;
+            transition: all 200ms ease-in;
 
             &.active{
                 border-bottom:2px solid var(--primary);
             }
             &:hover{
-                background: var(--off-white);
+                background: var(--gray-400);
             }
         }
     }
@@ -234,11 +239,11 @@ nav.categories{
 
 @media (min-width: 640px) {
     header .navbar {
-        .nav-auth{
-            display: flex;
+        .brand{
+            width: 120px;
         }
         .search-form{
-            display: block;
+            display: flex;
             width: 100%;
         }
         .search-icon{
@@ -253,7 +258,15 @@ nav.categories{
     
 }
 
+@media (min-width: 960px) {
+    header .navbar .nav-auth .sign-up{
+        display: block;
+    }
+}
+
+
 @media (min-width: 1024px) {
+    
     nav.categories{
         display: block;
     }

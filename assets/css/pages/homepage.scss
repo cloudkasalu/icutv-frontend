@@ -25,14 +25,6 @@
 
 }
 
-.featured-stories{
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
 
 @media (min-width: 640px) {
     .news-grid{

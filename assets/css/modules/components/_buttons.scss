@@ -9,6 +9,37 @@
 //     object-position: center;
 // }
 
+%tag{
+    display: inline-block;
+    padding: .25rem .75rem;
+    background: none;
+    border-radius: var(--rounded-md);
+    font-size: .75rem;
+
+    &.selected{
+        color: var(--white);
+    }
+}
+
+.tag-primary{
+    @extend %tag;
+    border: 1px solid var(--primary);
+
+    &.selected{
+    background-color: var(--primary);
+        
+    }
+
+}
+
+.tag-secondary{
+    @extend %tag;
+    border: 1px solid var(--secondary);
+    &.selected{
+        background-color: var(--secondary);
+
+    }
+}
 
 %btn{
     display: block;

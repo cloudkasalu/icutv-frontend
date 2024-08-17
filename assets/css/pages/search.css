@@ -29,9 +29,11 @@
 }
 
 .search-results {
+  max-width: var(--container-md);
+  margin: auto;
   margin-bottom: 2rem;
   padding-top: 3rem;
-  border-top: 1px solid var(--grey);
+  border-top: 1px solid var(--gray-300);
 }
 .search-results .results {
   display: grid;

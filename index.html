@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>ICU TV - </title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -12,7 +15,7 @@
     <script defer src="assets/js/script.js"></script>
 </head>
 <body>
-    <header>
+    <header class="navigation">
         <div class="annoucements">
 
         </div>
@@ -25,19 +28,24 @@
                 <a href="/" class="brand" title="home"><img src="assets/images/logo.svg" class="logo" alt="icu tv logo"></a>
             </div>
             <form class="search-form">
+                <button type="submit" title="search button" class="btn-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14" />
+                    </svg>
+                </button>
                 <input type="search" class="main-search" name="search" id="search" placeholder="Search">
             </form>
             <div class="navbar-icons">
+                <div class="nav-auth">
+                    <a href="" class="login btn-none" title="login">Log in</a>
+                    <a href="" class="sign-up btn-primary" title="sign up">Sign Up</a>
+                </div>
                 <button type="button" title="search" class="drawer-toggler search-icon" data-toggle="collapse" data-target="#drawer" aria-controls="drawer" aria-expanded="false" aria-label="Toggle Drawer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14" />
                     </svg>
                 </button>
-                <!-- <div class="nav-auth">
-                    <a href="/signup.html" class="sign-up btn-none" title="sign up">Login</a>
-                    <a href="/login.html" class="login btn-primary" title="login">Sign Up</a>
-                </div> -->
-                <div class="profile dropdown">
+                <!-- <div class="profile dropdown modal-dropdown">
                     <div class="dropdown-button">
                         <div class="avatar-placeholder">C</div>
                         <span class="username">Username</span>
@@ -45,7 +53,7 @@
                             <path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
                         </svg>
                     </div>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu rgt">
                         <ul class="menu-list">
                             <li class="menu-list-item">
                                 <a href="" class="menu-list-link">
@@ -69,21 +77,18 @@
                                 </a>
                             </li>
                             <li class="menu-list-item">
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button class="btn btn-none menu-list-link" href="{{ route('logout') }}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                            <path fill="currentColor" fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
-                                        </svg>
-                                        <span>
-                                            Logout
-                                        </span>
-                                    </button>
-                                </form>
+                                <a href="" class="menu-list-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="currentColor" fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>
+                                        Logout
+                                    </span>
+                                </a>
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>
@@ -91,11 +96,11 @@
         <div class="container-xl">
             <ul class="category-list">
                 <li class="category-item"><a href="/" class="category-link active">Home</a></li>
-                <li class="category-item"><a href="/" class="category-link">News</a></li>
-                <li class="category-item"><a href="/" class="category-link">Sports</a></li>
-                <li class="category-item"><a href="/" class="category-link">Business</a></li>
-                <li class="category-item"><a href="/" class="category-link">Technology</a></li>
-                <li class="category-item"><a href="/" class="category-link">Culture</a></li>
+                <li class="category-item"><a href="/category.html" class="category-link">News</a></li>
+                <li class="category-item"><a href="/category.html" class="category-link">Business</a></li>
+                <li class="category-item"><a href="/category.html" class="category-link">Technology</a></li>
+                <li class="category-item"><a href="/category.html" class="category-link">Culture</a></li>
+                <li class="category-item"><a href="/category.html" class="category-link">Sports</a></li>
             </ul>
         </div>
     </nav>
@@ -226,11 +231,57 @@
                     </div>
                 </div>
             </section>
-            <section id="featured">
+            <section class="featured">
                 <div class="container-xl">
                     <div class="section-heading">
                         <a href="/category.html" class="heading-link">
-                            <span>Culture</span>
+                            <span>Business</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <path fill="currentColor" fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10L8.22 6.28a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="featured-story">
+                        <a href="article.html" class="article-card card-main image-lft">
+                            <div class="article-details">
+                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit optio </h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem recusandae facilis sunt accusantium</p>
+                            </div>
+                            <div class="article-image">
+                                <img src="/assets/images/placeholder.webp" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="featured">
+                <div class="container-xl">
+                    <div class="section-heading">
+                        <a href="/category.html" class="heading-link">
+                            <span>Technology</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <path fill="currentColor" fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10L8.22 6.28a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="featured-story">
+                        <a href="article.html" class="article-card card-main">
+                            <div class="article-image">
+                                <img src="/assets/images/placeholder.webp" alt="">
+                            </div>
+                            <div class="article-details">
+                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit optio </h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quidem recusandae facilis sunt accusantium</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="featured">
+                <div class="container-xl">
+                    <div class="section-heading">
+                        <a href="/category.html" class="heading-link">
+                            <span>Entertainment</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <path fill="currentColor" fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10L8.22 6.28a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
                             </svg>
@@ -294,7 +345,7 @@
                 <li class="category-item"><a href="/" class="category-link">Culture</a></li>
             </ul>
             <div class="socials">
-                <h5>Follow ICU TV on: </h5>
+                <h5>Follow Us: </h5>
                 <ul class="socials-list">
                     <li class="social-item">
                         <a href="/" title="x" class="social-link">
@@ -327,10 +378,10 @@
                 </ul>
             </div>
             <ul class="footer-list">
-                <li class="footer-list-item"><a href="" class="footer-link">About ICU TV</a></li>
+                <li class="footer-list-item"><a href="" class="footer-link">About Us</a></li>
                 <li class="footer-list-item"><a href="" class="footer-link">Privacy Policy</a></li>
                 <li class="footer-list-item"><a href="" class="footer-link">Terms and Conditions</a></li>
-                <li class="footer-list-item"><a href="contact.html" class="footer-link">Contact ICU TV</a></li>
+                <li class="footer-list-item"><a href="contact.html" class="footer-link">Contact Us</a></li>
             </ul>
             <div class="copyrite-text"><p>&copy; 2024 ICU TV. All Rights Reserved.</p></div>
         </div>
