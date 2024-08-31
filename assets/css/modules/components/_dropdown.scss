@@ -32,4 +32,33 @@
             right: 0;
         }
     }
+
+    &.share{
+        .dropdown-button{
+            font-size: 15px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            display: flex;
+            column-gap: .5rem;
+            align-items: center;
+
+            span{
+                font-weight: 700;
+            }
+        
+            svg{
+                font-size: 24px;
+            }
+        }
+
+        .dropdown-menu{
+            .socials-list{
+                flex-direction: column;
+                row-gap: 1rem;
+                padding: .8rem;
+                background-color: var(--white);
+            }
+        }
+    }
 }

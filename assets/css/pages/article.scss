@@ -33,25 +33,6 @@
                 font-weight: 600;
             }
 
-            .dropdown-button{
-                font-size: 15px;
-                cursor: pointer;
-                background: none;
-                border: none;
-            
-                svg{
-                    font-size: 24px;
-                }
-            }
-
-            .dropdown-menu{
-                .socials-list{
-                    flex-direction: column;
-                    row-gap: 1rem;
-                    padding: .8rem;
-                    background-color: var(--white);
-                }
-            }
         }
     }
 
@@ -69,6 +50,9 @@
                 width: 100%;
                 max-width: 960px;
                 margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
 

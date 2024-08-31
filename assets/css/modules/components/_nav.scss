@@ -32,12 +32,13 @@ header  .navbar{
 
     .navbar-icons{
         display: flex;
+        column-gap: 1.5rem;
         align-items: center;
         &:first-of-type{
             column-gap: 1.25rem;
         }
         .drawer-toggler{
-            height: 24px;
+            display: flex;
             z-index: 10;
             border: none;
             background: none;
@@ -45,7 +46,7 @@ header  .navbar{
             cursor: pointer;
 
             svg{
-                width: 24px;
+                width: 28px;
                 height: 100%;
             }
 
@@ -112,7 +113,6 @@ header  .navbar{
     .search-form{
         display: none;
         overflow:hidden;
-
         border-radius: var(--rounded-md);
         background-color: var(--gray-500);
         button{
@@ -126,9 +126,10 @@ header  .navbar{
                 color: var(--text-color);
             }
         }
+
         .main-search{
             padding: 0.8rem;
-            background-color: var(--gray-500);
+            background-color: var(--gray-500) !important;
             width: 100%;
             max-width: 100%;
             border: none;
@@ -136,14 +137,21 @@ header  .navbar{
             color: var(--text-color);
             font-size: 15px;
             font-family: var(--body-font);
+
+            &:hover, &:focus, &:active{
+                background: none;
+                outline: none;
+            }
         }
     }
 
     .nav-auth{
+        display: none;
+    }
+    .nav-auth-mobile .user-icon{
         display: flex;
-        .sign-up{
-            display: none;
-        }
+        font-size: 28px;
+        color: var(--gray-40);
     }
 
     .avatar-placeholder, .avatar{
@@ -229,7 +237,7 @@ nav.categories{
                 border-bottom:2px solid var(--primary);
             }
             &:hover{
-                background: var(--gray-400);
+                background: var(--gray-500);
             }
         }
     }
@@ -242,11 +250,12 @@ nav.categories{
         .brand{
             width: 120px;
         }
+        
         .search-form{
             display: flex;
             width: 100%;
         }
-        .search-icon{
+        .navbar-icons .search-icon{
             display: none;
         }
         .profile {
@@ -259,8 +268,13 @@ nav.categories{
 }
 
 @media (min-width: 960px) {
-    header .navbar .nav-auth .sign-up{
-        display: block;
+    header .navbar {
+        .nav-auth{
+            display: flex;
+        }
+        .nav-auth-mobile{
+            display: none;
+        }
     }
 }
 

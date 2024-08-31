@@ -43,4 +43,21 @@
   .search-results {
     border: none;
   }
+}
+
+.search-empty-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 450px;
+}
+.search-empty-placeholder h2 {
+  color: var(--gray-100);
+}
+.search-empty-placeholder svg {
+  font-size: 120px;
+  color: var(--gray-300);
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=search.css.map */
